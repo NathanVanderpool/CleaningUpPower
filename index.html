@@ -312,6 +312,30 @@
       margin: 0;
     }
 
+    /* ── THE CIRCLE / ROOM ── */
+    .room-figure {
+      position: relative;
+      margin-top: 40px;
+      border: 1px solid var(--rule);
+      overflow: hidden;
+    }
+
+    .room-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.82) saturate(0.92);
+    }
+
+    /* gentle settle so the photo sits in the page rather than glaring */
+    .room-figure::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(19,18,16,0.25) 0%, transparent 35%, transparent 70%, rgba(19,18,16,0.45) 100%);
+    }
+
     /* ── LOGISTICS ── */
     .logistics-block {
       background: var(--bg2);
@@ -377,6 +401,11 @@
     }
 
     /* ── REGISTER ── */
+    .register-section .room-figure {
+      max-width: 520px;
+      margin: 0 auto 48px;
+    }
+
     .register-section {
       text-align: center;
       padding: 100px 24px;
@@ -577,9 +606,12 @@
 
   <!-- REGISTER -->
   <div class="register-section reveal">
+    <figure class="room-figure">
+      <img src="Room.jpeg" alt="The room where the retreat is held" />
+    </figure>
     <div class="section-label" style="justify-content:center;">Ready?</div>
     <h2>Join us</h2>
-    <p>Spaces are limited. The fee reflects the real cost of three days of skilled facilitation — and if it's still out of reach, get in touch. We'll find a way.</p>
+    <p>The circle is firmly capped at twelve men — when those places are taken, registration closes. The fee is €200, reflecting the real cost of three days of skilled facilitation; if that's out of reach, get in touch and we'll find a way.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUXeqo0cGy7ubFkwGmfMJjTOEWN3BvwvyYKQxipVjRxro5Jw/viewform?usp=publish-editor" target="_blank" class="btn">Register Now</a>
   </div>
 
